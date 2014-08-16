@@ -1,0 +1,14 @@
+{
+  "name": "logo-reveal",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-autoprefixer": "^1.0.0",
+    "grunt-browserify": "^2.1.4",
+    "grunt-browserify-bower": "^0.1.4",
+    "grunt-contrib-less": "^0.11.4",
+    "grunt-contrib-watch": "^0.6.1",
+    "load-grunt-tasks": "^0.6.0",
+    "lorem-ipsum": "^1.0.1",
+    "minifyify": "^4.0.4"
+  }
+}

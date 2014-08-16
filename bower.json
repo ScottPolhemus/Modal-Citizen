@@ -1,0 +1,16 @@
+{
+  "name": "logo-reveal",
+  "moduleType": [
+    "node"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "mixitup": "~2.1.6",
+    "stellar": "~0.6.2",
+    "jquery": "~2.1.1"
+  }
+}

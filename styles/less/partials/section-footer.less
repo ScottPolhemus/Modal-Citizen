@@ -1,0 +1,62 @@
+footer.footer {
+	position: relative;
+	color: white;
+	background: @almost-blk;
+	overflow: auto;
+	font-size: 2em;
+
+	.site-map {
+		float: left;
+		max-width: 50%;
+		display: block;
+		position: relative;
+
+		label {
+			display: block;
+			padding: 1em;
+		}
+		input {
+			position: absolute;
+			top: 0; left: 0;
+			opacity: 0;
+			
+			&:checked + img {
+				display: block;
+			}
+		}
+		img {
+			display: none;
+		}
+	}
+
+	.back-to-top {
+		padding: 1em;
+		float: right;
+		max-width: 50%;
+		display: block;
+		color: white;
+		text-decoration: none;
+	}
+}
+
+#SiteMap {
+	position: fixed;
+	top: 0; bottom: 0;
+	left: 0; right: 0;
+	margin: auto;
+	width: 100%;
+	max-width: 25rem;
+	max-height: 90%;
+	z-index: 9;
+
+	animation: slideUpMap 1s;
+}
+
+@keyframes slideUpMap {
+	0% {
+		transform: translateY(100%);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}

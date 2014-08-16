@@ -1,0 +1,151 @@
+.team {
+  position: relative;
+  padding: 1em;
+  padding-top: 4em;
+  padding-bottom: 10em;
+  margin-top: 1em;
+  background: @teal;
+
+  > .inner {
+    max-width: 1400px;
+  }
+
+  h2 {
+    font-size: 1.25em;
+    padding: 0.5em 0;
+    text-align: center;
+    background: @almost-blk;
+    color: white;
+    max-width: 10rem;
+    text-transform: uppercase;
+
+    position: absolute;
+    bottom: 100%;
+    left: 0; right: 0;
+    margin: auto;
+    transform: translateY(50%);
+  }
+
+  h3 {
+    font-size: 1em;
+    text-transform: uppercase;
+  }
+
+  .sort, .filter {
+    float: left;
+    width: 50%;
+    text-align: center;
+
+    ul {
+      list-style: none;
+      padding-top: 0.5em;
+
+      li {
+        cursor: pointer;
+
+        display: inline-block;
+
+        border: 2px solid @almost-blk;
+        height: 2em;
+        line-height: 2em;
+        padding: 0 1em;
+        margin-bottom: 0.25em;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 8.5em;
+
+        @media (max-width: @break-md) {
+          display: block;
+          width: auto;
+          margin-bottom: 0.5em;
+        }
+
+        &.up,
+        &.down,
+        &.special,
+        &.on {
+          font-weight: @bold;
+        }
+        &.up:after {
+          content: '⬆';
+        }
+        &.down:after {
+          content: '⬇';
+        }
+        &.special:after {
+          content: '?';
+          margin: 0 0.1em;
+          font-size: 1.15em;
+        }
+        &.reset.on {
+          font-weight: @normal;
+        }
+      }
+    }
+  }
+
+  .sort ul {
+    padding-right: 0.5em;
+  }
+
+  .filter ul {
+    padding-left: 0.5em;
+  }
+}
+
+.peeps {
+  clear: left;
+  overflow: auto;
+  margin-left: -1em;
+  margin-right: -1em;
+  padding-top: 0.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.person {
+  display: none;
+  float: left;
+  width: 50%;
+  margin: 0;
+  padding: 0.5em;
+
+  @media (min-width: @break-md) {
+    width: 25%;
+  }
+
+  > .inner {
+    position: relative;
+    display: block;
+    text-align: center;
+    background: white;
+    border: 0.25rem solid @almost-blk;
+    max-width: 15em;
+    padding: 0 2em;
+  }
+
+  header {
+    .v-align;
+    width: 100%;
+    padding-bottom: 1.2em;
+    min-height: 7.5em;
+  }
+
+  h1 {
+    margin: 0;
+    line-height: 1;
+  }
+
+  p {
+    margin-top: 0.5em;
+    line-height: 1.3;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  // header {
+  //   height: 1em;
+  // }
+}

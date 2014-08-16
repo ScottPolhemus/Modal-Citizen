@@ -1,0 +1,49 @@
+.parallax {
+  .v-align;
+  height: 300px;
+  width: 100%;
+  background: @teal;
+  color: white;
+  overflow: hidden;
+
+  p {
+    max-width: @container-max;
+    margin: auto;
+    font-size: 4em;
+
+    @media(max-width: @break-sm-max) {
+      font-size: 3em;
+    }
+
+    span {
+      display: block;
+      opacity: 0.2;
+
+      &:nth-child(1) {
+        text-transform: uppercase;
+        font-weight: @bold;
+        float: left;
+        margin-left: 1em;
+        font-size: 0.75em;
+      }
+      &:nth-child(2) {
+        text-transform: lowercase;
+        font-style: italic;
+        clear: left;
+        float: right;
+        margin-right: 1em;
+        font-size: 1.4em;
+        transform: translateZ(-2px);
+      }
+    }
+  }
+
+  h2 {
+    clear: both;
+    width: 100%;
+    padding-bottom: 2rem;
+    font-size: 3em;
+    font-weight: @normal;
+    text-align: center;
+  }
+}

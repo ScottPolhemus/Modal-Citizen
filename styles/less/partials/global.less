@@ -1,0 +1,119 @@
+* {
+  margin: auto;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html,
+body,
+.full-height {
+  height: 100%;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+  color: @almost-blk;
+
+  @media (max-width: @break-sm-max), (max-height: @break-sm-max) {
+    font-size: 15px;
+  }
+}
+
+.foot {
+  display: none;
+}
+
+#Activate {
+  position: relative;
+  display: block;
+  
+  border: 0;
+  outline: none;
+  z-index: 1;
+
+  font-size: 1.2em;
+  line-height: 1;
+  text-transform: uppercase;
+  color: white;
+  background: none;
+  cursor: pointer;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  span {
+    position: relative;
+    display: block;
+    margin-bottom: 0.75rem;
+    padding: 1.25rem 2rem;
+    background: @teal;
+    transition: transform 150ms;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0; right: 0;
+    height: 0.75rem;
+    background: @dark-teal;
+    z-index: -1;
+  }
+
+  &:active {
+    span {
+      transform: translateY(0.75rem);  
+    }
+  }
+}
+
+.modal {
+  .full-height;
+  .v-align;
+  position: fixed;
+  width: 100%;
+  top: 0; left: 0;
+  z-index: 100;
+
+  &.out {
+    display: none;
+  }
+
+  > .inner {
+    text-align: center;
+  }
+
+  .img-wrap {
+    display: inline-block;
+    margin: auto;
+    background: @teal;
+    padding: 1em;
+    box-shadow: 0 0 10em black;
+
+    animation: showModal 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  img {
+    width: 500px;
+    max-width: 100%;
+  }
+
+  h1 {
+    max-width: 500px;
+    padding: 2em 0;
+    color: white;
+    background: @almost-blk;
+  }
+}
+
+@keyframes showModal {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
